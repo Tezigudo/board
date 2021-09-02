@@ -29,7 +29,7 @@ def toss_dice() -> int:
 
 
 def play_one_round(distance_list: list[int]) -> None:
-    '''allow player toses dice and update distance in each round'''
+    '''Allow player toses dice and update distance in each round'''
 
     for i in range(len(distance_list)):
         val = toss_dice()
@@ -50,15 +50,14 @@ def play_all_rounds(Round_count: int, distance_list: list[int]) -> None:
 
 
 def find_winner(distance_list: list[int]) -> tuple:
-    '''return winning player and maximum distance of winning number'''
+    '''Return winning player and maximum distance of winning number'''
 
     max_dist = max(distance_list)
     winner = distance_list.index(max_dist)+1
-
     return winner, max_dist
 
 
-def main():
+def main() -> None:
     '''This function run a extire Program'''
 
     Player_count = int(input('Enter number of players: '))

@@ -32,7 +32,7 @@ def randomize_hand() -> str:
     If random number is 3, return “Scissors”'''
     rand_num = randrange(1, 4)
 
-    return (['Rock', 'Paper', 'Scissors'][rand_num-1])
+    return ['Rock', 'Paper', 'Scissors'][rand_num-1]
 
 
 def find_round_winner(hand1: str, hand2: str) -> int:
@@ -89,14 +89,14 @@ def play_one_round(team_1: list[int], team_2: list[int]) -> None:
 def play_all_rounds(round_count: int,
                     team_1: list[int],
                     team_2: list[int]) -> None:
-    '''Repetitively  for round_count rounds.'''
+    '''This function Repetitively  for round_count rounds.'''
     for i in range(1, round_count+1):
         print(f'Round{i}:')
         play_one_round(team_1, team_2)
 
 
 def find_final_winner(team_1: list[int], team_2: list[int]) -> tuple:
-    '''this function will calculate the winner it will return
+    '''This function will calculate the winner it will return
     (number of winning team, number of win,
     number of win of other team) respectively'''
     score_team_1 = sum(team_1)
@@ -110,7 +110,7 @@ def find_final_winner(team_1: list[int], team_2: list[int]) -> tuple:
         return 2, score_team_2, score_team_1
 
 
-def main():
+def main() -> None:
     '''This function run a entire program'''
     Player_count = int(input('Enter number of players: '))
     round_count = int(input('Enter number of rounds: '))
