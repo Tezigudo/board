@@ -112,6 +112,7 @@ def find_final_winner(team_1: list[int], team_2: list[int]) -> tuple:
 
 def main() -> None:
     '''This function run a entire program'''
+
     Player_count = int(input('Enter number of players: '))
     round_count = int(input('Enter number of rounds: '))
     team_1 = initialize_list(Player_count)
