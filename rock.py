@@ -72,8 +72,8 @@ def play_one_round(team_1: list[int], team_2: list[int]) -> None:
     player_1_choose = randomize_hand()
     player_2_choose = randomize_hand()
 
-    print(f'Team1: Player 1 plays with Hand: {player_1_choose}')
-    print(f'Team2: Player 1 plays with Hand: {player_2_choose}')
+    print(f'Team1: Player {player_from_team_1+1} plays with Hand: {player_1_choose}')
+    print(f'Team2: Player {player_from_team_2+1} plays with Hand: {player_2_choose}')
     result = find_round_winner(player_1_choose, player_2_choose)
     report_winner(result)
 
